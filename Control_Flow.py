@@ -14,7 +14,7 @@ if "eggs":
     print("Yes, why not")
 
 # Flat is better than nested
-h = 
+h = 49
 if h > 50:
     print("Greater than 50")
     if h > 100:
