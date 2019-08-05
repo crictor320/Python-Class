@@ -7,4 +7,7 @@ learn about control flow in Python
 if True:
     print("It is true")
 
+if bool("eggs"):
+    print("Yes please!")
+
 print("Done")
