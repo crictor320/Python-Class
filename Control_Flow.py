@@ -13,9 +13,12 @@ if bool("eggs"):
 if "eggs":
     print("Yes, why not")
 
-h = 50
+# Flat is better than nested
+h = 
 if h > 50:
     print("Greater than 50")
+    if h > 100:
+        print("Greater than 100")
 elif h < 50: #else if
     print("Less than 50")
 else:
