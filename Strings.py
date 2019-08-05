@@ -24,3 +24,15 @@ print(s4)
 # Support for backslash
 s5 = "A \\ in a string"
 print(s5)
+
+s6 = 'this is "wow"'
+print(s6)
+
+# Raw Strings - ignores all the formatting stuff
+raw_string = r'C:\stuff\stuff\stuff'
+print(raw_string)
+
+# Strings as sequence
+p = "parrot"
+print("s[4]", p[4], type(p))  #index notation - prints 4th index, and object type which is a string
+print(p, p.capitalize())    #s.capitalize() capitalizes the first first letter
