@@ -14,3 +14,16 @@ print(a, a[1])
 # Replace an element
 a[1] = 3.14
 print(a, a[1])
+
+# Begin with an empty list, fill a list via prompt until list is full and then print
+names = []
+
+total = 0
+while total < 3:
+    name = input("Enter a name")
+    names.append(name) #list if being created and destroyed everytime
+    total = total + 1
+
+#display names
+print(names)
+
