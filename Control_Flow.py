@@ -13,10 +13,12 @@ if bool("eggs"):
 if "eggs":
     print("Yes, why not")
 
-h = 49
+h = 50
 if h > 50:
     print("Greater than 50")
-else:
+elif h < 50: #else if
     print("Less than 50")
+else:
+    print("Equals 50")
 
 print("Done")
