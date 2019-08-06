@@ -13,7 +13,7 @@ def rename_files():
     Rename files in a folder
     :return: nothing
     """
-    folder_dir = r"C:\Users\cooperrictor.AD\Desktop\Hafb\prank_backup"
+    folder_dir = r"C:\Users\cooperrictor.AD\Desktop\Hafb\prankorig"
     files = os.listdir(folder_dir)
     saved_path = os.getcwd()                #saves current working directory
     #change directory to the files directory so that you can change the file names
