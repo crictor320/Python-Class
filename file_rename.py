@@ -16,7 +16,7 @@ def rename_files():
     folder_dir = r"C:\Users\cooperrictor.AD\Desktop\Hafb\prank_backup"
     files = os.listdir(folder_dir)
     saved_path = os.getcwd()                #saves current working directory
-    #change directory to the files directory
+    #change directory to the files directory so that you can change the file names
     os.chdir(folder_dir)
     for file in files:
         #remove digits from name
