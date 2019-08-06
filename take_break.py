@@ -18,7 +18,7 @@ def main():
         time.sleep(60*60)   #delay video 1 hour
         webbrowser.open(video_address)
         counter += 1
-        print("It's time to take a break")
+        print("It's time to take a break", time.ctime())
 
 
 if __name__ == '__main__':
