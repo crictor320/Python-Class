@@ -68,6 +68,7 @@ def main():
     add_spam(breakfast)
     print("After", breakfast)
 
+
 if __name__ == '__main__':
     main()
     exit(0)
