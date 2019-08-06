@@ -1,4 +1,7 @@
 """
+This reads in a text file, decodes and splits so that every word is a string
+Those strings are places in a dictionary and similar word counted
+Refer to chapter 2 in the book
 Get a file from the web: http://icarus.cs.weber.edu/~hvalle/hafb/words.txt
 
 task 1: Count number of words in document
@@ -8,40 +11,46 @@ from urllib.request import urlopen
 
 
 
-def fetch_words():
+def fetch_words(filename):
     """
-    fetch the words from a file on the web
-    :return:
+    Count words in url file
+    :param filename: url to file
+    :return: a list with the items
     """
-
-    file = r"http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
-    counter = 0
-    data = {}
-    with urlopen(file) as story:
+    count = 0
+    data = []       # empty list
+    with urlopen(filename) as story:
         for line in story:
-            words = line.decode('utf-8').split()   #decodes the btyes and adds a space between each entity
-            #print(words)
+            words = line.decode('utf-8').split()  # split with space as separator
+            # print(words)
             for word in words:
-                if word in data:
-                    data[word] += 1
-                else:
-                    data[word] = 1
-                counter += 1
-    print("Total number of words", counter)
+                data.append(word)
+    return data
 
-    #sort by keys
-    for key in sorted(data.keys()):
-        print(key, data[key])
+
+def print_items(items):
+    """
+    Print elements of the collection
+    :param items: A collections of objects
+    :return: nothing
+    """
+    for item in items:
+        print(item)
 
 
 def main():
-    fetch_words()
+    """
+    Test function for words library
+    :return: nothing
+    """
+    file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
+    words = fetch_words(file)
+    print_items(words)
 
 
 if __name__ == '__main__':
     main()
-
-
+    exit(0)
 
 
 
